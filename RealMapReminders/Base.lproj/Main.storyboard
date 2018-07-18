@@ -210,7 +210,7 @@
                                 <navigationItem title="Checklists" id="d3S-Ib-Rwx">
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="bd1-9r-dpb">
                                         <connections>
-                                            <segue destination="5Mh-5D-WeJ" kind="show" identifier="addReminder" id="dxK-cu-xht"/>
+                                            <segue destination="5Mh-5D-WeJ" kind="show" id="dxK-cu-xht"/>
                                         </connections>
                                     </barButtonItem>
                                 </navigationItem>
