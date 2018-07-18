@@ -5,6 +5,7 @@
         <attribute name="longitude" optional="YES" attributeType="Transformable" syncable="YES"/>
     </entity>
     <entity name="Reminder" representedClassName=".Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="locationTitle" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="textField_1" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="textField_2" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="textField_3" optional="YES" attributeType="String" syncable="YES"/>
@@ -13,7 +14,7 @@
         <attribute name="textField_6" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Reminder" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Reminder" positionX="-63" positionY="-18" width="128" height="150"/>
         <element name="Location" positionX="-54" positionY="36" width="128" height="75"/>
     </elements>
 </model>

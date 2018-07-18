@@ -7,3 +7,10 @@
 //
 
 import Foundation
+import UIKit
+
+class checklistTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var locationTitleLabel: UILabel!
+    
+}

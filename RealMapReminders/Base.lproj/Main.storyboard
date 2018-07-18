@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5Mh-5D-WeJ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -82,8 +82,16 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <items>
                                     <navigationItem id="R9d-95-M9J">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vGF-44-K4l"/>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qC0-a1-qtc"/>
+                                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="vGF-44-K4l">
+                                            <connections>
+                                                <segue destination="BYZ-38-t0r" kind="show" identifier="cancel" id="4sX-tt-MEN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="qC0-a1-qtc">
+                                            <connections>
+                                                <segue destination="NXE-oP-qao" kind="show" identifier="save" id="FDc-4E-ucF"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -143,30 +151,40 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminderz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7hZ-8L-pzG">
-                                <rect key="frame" x="146" y="80" width="82" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="locationTextField" borderStyle="roundedRect" placeholder="Location..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akl-zA-1Lb">
+                                <rect key="frame" x="40" y="76" width="295" height="30"/>
                                 <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YHL-Rv-t74" firstAttribute="leading" secondItem="EBT-hY-iJG" secondAttribute="leading" id="50P-xg-i1N"/>
-                            <constraint firstItem="7hZ-8L-pzG" firstAttribute="centerX" secondItem="zlY-gy-Ii9" secondAttribute="centerX" id="Jbe-b1-vEt"/>
+                            <constraint firstItem="akl-zA-1Lb" firstAttribute="leading" secondItem="EBT-hY-iJG" secondAttribute="leading" constant="40" id="EhS-5d-9Kv"/>
                             <constraint firstItem="YHL-Rv-t74" firstAttribute="top" secondItem="v24-n7-UZu" secondAttribute="bottom" constant="54" id="L64-co-YVE"/>
                             <constraint firstItem="v24-n7-UZu" firstAttribute="leading" secondItem="EBT-hY-iJG" secondAttribute="leading" constant="20" id="Uzo-59-zGh"/>
                             <constraint firstItem="v24-n7-UZu" firstAttribute="top" secondItem="zlY-gy-Ii9" secondAttribute="bottom" constant="76" id="irB-XC-9Xn"/>
                             <constraint firstItem="YHL-Rv-t74" firstAttribute="bottom" secondItem="EBT-hY-iJG" secondAttribute="bottom" id="iw0-Vt-M8C"/>
                             <constraint firstItem="zlY-gy-Ii9" firstAttribute="top" secondItem="EBT-hY-iJG" secondAttribute="top" id="ixA-Wd-efB"/>
                             <constraint firstItem="zlY-gy-Ii9" firstAttribute="trailing" secondItem="YHL-Rv-t74" secondAttribute="trailing" id="qIh-FT-gCZ"/>
+                            <constraint firstItem="EBT-hY-iJG" firstAttribute="trailing" secondItem="akl-zA-1Lb" secondAttribute="trailing" constant="40" id="rjH-Rj-tBT"/>
                             <constraint firstItem="EBT-hY-iJG" firstAttribute="trailing" secondItem="v24-n7-UZu" secondAttribute="trailing" constant="20" id="uP8-nR-oZU"/>
+                            <constraint firstItem="akl-zA-1Lb" firstAttribute="top" secondItem="zlY-gy-Ii9" secondAttribute="bottom" constant="12" id="ufp-6y-bZ5"/>
                             <constraint firstItem="zlY-gy-Ii9" firstAttribute="leading" secondItem="YHL-Rv-t74" secondAttribute="leading" id="vvy-iL-iaV"/>
                             <constraint firstItem="YHL-Rv-t74" firstAttribute="trailing" secondItem="EBT-hY-iJG" secondAttribute="trailing" id="yd1-93-TII"/>
-                            <constraint firstItem="7hZ-8L-pzG" firstAttribute="top" secondItem="zlY-gy-Ii9" secondAttribute="bottom" constant="16" id="zUd-xp-EEb"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EBT-hY-iJG"/>
                     </view>
+                    <connections>
+                        <outlet property="fiveTextField" destination="Fbw-3h-7Lc" id="pfc-Dx-LGZ"/>
+                        <outlet property="fourTextField" destination="e8g-TV-lvX" id="RSR-XI-cxq"/>
+                        <outlet property="locationTextField" destination="akl-zA-1Lb" id="FUI-Zf-QR9"/>
+                        <outlet property="oneTextField" destination="Kdx-rx-y89" id="z94-Fw-1Sj"/>
+                        <outlet property="sixTextField" destination="OlL-eP-6ga" id="05T-dX-ea2"/>
+                        <outlet property="threeTextField" destination="HqM-GV-Kcr" id="YwT-sc-bQg"/>
+                        <outlet property="twoTextField" destination="SST-nw-Tok" id="Nl5-tF-30J"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iPH-9h-ytR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -181,15 +199,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checkListTableViewCell" id="T8q-e7-88G">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="checklistTableViewCell" id="T8q-e7-88G" customClass="checklistTableViewCell" customModule="RealMapReminders" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="T8q-e7-88G" id="1tx-yd-0tr">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsR-mF-nZT">
-                                            <rect key="frame" x="16" y="49" width="69" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ahsvjbknsw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsR-mF-nZT">
+                                            <rect key="frame" x="16" y="49" width="95" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -197,6 +215,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="locationTitleLabel" destination="vsR-mF-nZT" id="ioN-Ut-ewq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -228,4 +249,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="4sX-tt-MEN"/>
+    </inferredMetricsTieBreakers>
 </document>
