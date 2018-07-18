@@ -17,9 +17,11 @@ class checklistTableViewController: UITableViewController {
         }
     }
     
+    
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         reminders = CoreDataHelper.retrieveReminders()
     }
+ 
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,14 +54,14 @@ class checklistTableViewController: UITableViewController {
         guard let identifier = segue.identifier else { return }
         
         switch identifier {
-        case " displayReminders":
+        case "viewReminder":
             guard let indexPath = tableView.indexPathForSelectedRow else { return }
             let reminder = reminders[indexPath.row]
             let destination = segue.destination as! createChecklistViewController
             destination.reminder = reminder
             
         case "addReminder":
-            print("create note bar button item tapped")
+            print("create new reminder bar button item tapped")
             
         default:
             print("unexpected segue identifier")
