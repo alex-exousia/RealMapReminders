@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreLocation
 
 class createChecklistViewController: UIViewController {
     
@@ -89,8 +90,7 @@ class createChecklistViewController: UIViewController {
         }
     }
 
-
 }
 
-    
+
 

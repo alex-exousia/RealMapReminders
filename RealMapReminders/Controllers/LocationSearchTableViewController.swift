@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import MapKit
 
-class LocationSearchTable : UITableViewController {
+class LocationSearchTable: UITableViewController {
     var handleMapSearchDelegate:HandleMapSearch? = nil
     var matchingItems:[MKMapItem] = []
     var mapView: MKMapView? = nil

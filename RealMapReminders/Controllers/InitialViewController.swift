@@ -10,6 +10,7 @@ class InitialViewController : UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -26,11 +27,10 @@ class InitialViewController : UIViewController {
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+    
         
-        let geofenceRegionCenter = CLLocationCoordinate2DMake(37.773485, -122.417719)
-        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter,
-                                              radius: 100,
-                                              identifier: "UniqueIdentifier")
+    //    let geofenceRegionCenter = CLLocationCoordinate2DMake(37.773485, -122.417719)
+     //   let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter,radius: 100,identifier: "UniqueIdentifier")
     }
 }
 
