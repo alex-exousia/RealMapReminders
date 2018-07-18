@@ -50,5 +50,34 @@ struct CoreDataHelper {
             return []
         }
     }
+    
+    static func newLocation() -> Location {
+        let location = NSEntityDescription.insertNewObject(forEntityName: "Location", into:context) as! Location
+        return location
+    }
+    static func saveLocation() {
+        do {
+            try context.save()
+        } catch let error {
+            print("Could not save \(error.localizedDescription)")
+            
+        }
+    }
+    
+    static func retrieveLocation() -> [Location] {
+        do {
+            let fetchRequest = NSFetchRequest<Location>(entityName: "Location")
+            let results = try context.fetch(fetchRequest)
+            //let sorted = results.sorted { (first, second) -> Bool in
+            //  return first.modificationTime! > second.modificationTime!
+            print ("\(fetchRequest)")
+            print ("\(results)")
+        }
+            //return sorted
+        catch let error {
+            print ("Could not fetch \(error.localizedDescription)")
+        }
+        return []
+    }
 }
 

@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  RealMapReminders
-//
-//  Created by Alexander Niehaus on 7/18/18.
-//  Copyright © 2018 Make School. All rights reserved.
-//
-
 import UIKit
 import MapKit
 protocol HandleMapSearch {
@@ -34,8 +26,15 @@ class InitialViewController : UIViewController {
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
+        
+        let geofenceRegionCenter = CLLocationCoordinate2DMake(37.773485, -122.417719)
+        let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter,
+                                              radius: 100,
+                                              identifier: "UniqueIdentifier")
     }
 }
+
+
 
 extension InitialViewController : CLLocationManagerDelegate {
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
@@ -50,7 +49,7 @@ extension InitialViewController : CLLocationManagerDelegate {
             let region = MKCoordinateRegion(center: location.coordinate, span: span)
             mapView.setRegion(region, animated: true)
             
-            // print(“location:: \(location)“)
+            // print("location:: \(location)")
         }
     }
     
@@ -77,11 +76,14 @@ extension InitialViewController: HandleMapSearch {
         //Save these to core data to re-render later
         let latToSave = placemark.coordinate.latitude
         let longToSave = placemark.coordinate.longitude
-        //let savedLocation = CoreDataHelper.newLocation()
-        
+        let savedLocation = CoreDataHelper.newLocation()
+        savedLocation.latToSave = latToSave
+        savedLocation.longToSave = longToSave
+        CoreDataHelper.saveLocation()
         mapView.setRegion(region, animated: true)
         print("\(latToSave) , \(longToSave)")
+        let Loco = CoreDataHelper.retrieveLocation()
+        print("\(Loco)")
         
     }
 }
-
