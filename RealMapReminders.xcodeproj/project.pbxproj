@@ -8,20 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		C931214020FF9FB500AA577C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931213F20FF9FB500AA577C /* AppDelegate.swift */; };
-		C931214220FF9FB500AA577C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931214120FF9FB500AA577C /* ViewController.swift */; };
+		C931214220FF9FB500AA577C /* InitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931214120FF9FB500AA577C /* InitialViewController.swift */; };
 		C931214520FF9FB500AA577C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C931214320FF9FB500AA577C /* Main.storyboard */; };
 		C931214720FF9FB500AA577C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C931214620FF9FB500AA577C /* Assets.xcassets */; };
 		C931214A20FF9FB500AA577C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C931214820FF9FB500AA577C /* LaunchScreen.storyboard */; };
+		C931215320FFA20100AA577C /* checklistTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215220FFA20100AA577C /* checklistTableViewController.swift */; };
+		C931215520FFA21C00AA577C /* createChecklistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215420FFA21C00AA577C /* createChecklistViewController.swift */; };
+		C931215720FFA23A00AA577C /* locationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215620FFA23A00AA577C /* locationSearchTableViewController.swift */; };
+		C931215920FFA35C00AA577C /* checklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215820FFA35B00AA577C /* checklistTableViewCell.swift */; };
+		C931215C20FFA37200AA577C /* RealMapReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C931215A20FFA37200AA577C /* RealMapReminders.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		C931213C20FF9FB500AA577C /* RealMapReminders.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealMapReminders.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C931213F20FF9FB500AA577C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C931214120FF9FB500AA577C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C931214120FF9FB500AA577C /* InitialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialViewController.swift; sourceTree = "<group>"; };
 		C931214420FF9FB500AA577C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C931214620FF9FB500AA577C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C931214920FF9FB500AA577C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C931214B20FF9FB500AA577C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C931215220FFA20100AA577C /* checklistTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistTableViewController.swift; sourceTree = "<group>"; };
+		C931215420FFA21C00AA577C /* createChecklistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = createChecklistViewController.swift; sourceTree = "<group>"; };
+		C931215620FFA23A00AA577C /* locationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = locationSearchTableViewController.swift; sourceTree = "<group>"; };
+		C931215820FFA35B00AA577C /* checklistTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = checklistTableViewCell.swift; sourceTree = "<group>"; };
+		C931215B20FFA37200AA577C /* RealMapReminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RealMapReminders.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +65,26 @@
 			isa = PBXGroup;
 			children = (
 				C931213F20FF9FB500AA577C /* AppDelegate.swift */,
-				C931214120FF9FB500AA577C /* ViewController.swift */,
+				C931215120FFA1EB00AA577C /* Controllers */,
 				C931214320FF9FB500AA577C /* Main.storyboard */,
 				C931214620FF9FB500AA577C /* Assets.xcassets */,
 				C931214820FF9FB500AA577C /* LaunchScreen.storyboard */,
 				C931214B20FF9FB500AA577C /* Info.plist */,
+				C931215820FFA35B00AA577C /* checklistTableViewCell.swift */,
+				C931215A20FFA37200AA577C /* RealMapReminders.xcdatamodeld */,
 			);
 			path = RealMapReminders;
+			sourceTree = "<group>";
+		};
+		C931215120FFA1EB00AA577C /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C931214120FF9FB500AA577C /* InitialViewController.swift */,
+				C931215220FFA20100AA577C /* checklistTableViewController.swift */,
+				C931215420FFA21C00AA577C /* createChecklistViewController.swift */,
+				C931215620FFA23A00AA577C /* locationSearchTableViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +158,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C931214220FF9FB500AA577C /* ViewController.swift in Sources */,
+				C931215720FFA23A00AA577C /* locationSearchTableViewController.swift in Sources */,
+				C931215320FFA20100AA577C /* checklistTableViewController.swift in Sources */,
+				C931215920FFA35C00AA577C /* checklistTableViewCell.swift in Sources */,
+				C931214220FF9FB500AA577C /* InitialViewController.swift in Sources */,
 				C931214020FF9FB500AA577C /* AppDelegate.swift in Sources */,
+				C931215520FFA21C00AA577C /* createChecklistViewController.swift in Sources */,
+				C931215C20FFA37200AA577C /* RealMapReminders.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +360,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C931215A20FFA37200AA577C /* RealMapReminders.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C931215B20FFA37200AA577C /* RealMapReminders.xcdatamodel */,
+			);
+			currentVersion = C931215B20FFA37200AA577C /* RealMapReminders.xcdatamodel */;
+			path = RealMapReminders.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C931213420FF9FB400AA577C /* Project object */;
 }

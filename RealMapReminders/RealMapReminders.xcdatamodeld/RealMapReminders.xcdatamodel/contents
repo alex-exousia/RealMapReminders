@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Location" representedClassName=".Location" syncable="YES" codeGenerationType="class">
+        <attribute name="latitude" optional="YES" attributeType="Transformable" syncable="YES"/>
+        <attribute name="longitude" optional="YES" attributeType="Transformable" syncable="YES"/>
+    </entity>
+    <entity name="Reminder" representedClassName=".Reminder" syncable="YES" codeGenerationType="class">
+        <attribute name="textField_1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textField_2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textField_3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textField_4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textField_5" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="textField_6" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Reminder" positionX="-63" positionY="-18" width="128" height="135"/>
+        <element name="Location" positionX="-54" positionY="36" width="128" height="75"/>
+    </elements>
+</model>
