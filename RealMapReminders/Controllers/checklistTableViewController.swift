@@ -27,7 +27,7 @@ class checklistTableViewController: UITableViewController {
         super.viewDidLoad()
         reminders = CoreDataHelper.retrieveReminders()
         self.navigationController?.isNavigationBarHidden = false
-       
+       self.hideKeyboardWhenTappedAround() 
 
     }
     

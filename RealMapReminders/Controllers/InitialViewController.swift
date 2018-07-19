@@ -12,7 +12,7 @@ class InitialViewController : UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+    self.hideKeyboardWhenTappedAround() 
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()

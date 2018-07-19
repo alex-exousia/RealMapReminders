@@ -15,6 +15,7 @@ class createChecklistViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.isNavigationBarHidden = false
+        self.hideKeyboardWhenTappedAround() 
     }
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -75,15 +76,15 @@ class createChecklistViewController: UIViewController {
             destination.tableView.reloadData()
             
         // 3
- //       case "save" where reminder == nil:
-//            let reminder = CoreDataHelper.newReminder()
-//            reminder.textField_1 = oneTextField.text ?? ""
-//            reminder.textField_2 = twoTextField.text ?? ""
-//            reminder.textField_3 = threeTextField.text ?? ""
-//            reminder.textField_4 = fourTextField.text ?? ""
-//            reminder.textField_5 = fiveTextField.text ?? ""
-//            reminder.textField_6 = sixTextField.text ?? ""
-//            reminder.locationTitle = locationTextField.text ?? ""
+        case "save" where reminder == nil:
+            let reminder = CoreDataHelper.newReminder()
+            reminder.textField_1 = oneTextField.text ?? ""
+            reminder.textField_2 = twoTextField.text ?? ""
+            reminder.textField_3 = threeTextField.text ?? ""
+            reminder.textField_4 = fourTextField.text ?? ""
+            reminder.textField_5 = fiveTextField.text ?? ""
+            reminder.textField_6 = sixTextField.text ?? ""
+            reminder.locationTitle = locationTextField.text ?? ""
             
         case "setNewLocation":
             print("")
