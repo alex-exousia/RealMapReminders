@@ -245,12 +245,19 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="POH-G3-yfS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Set New Location" id="CKa-gz-GoJ"/>
+                    <navigationItem key="navigationItem" title="Set New Location" id="CKa-gz-GoJ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="jC8-c5-OO8">
+                            <connections>
+                                <segue destination="EkS-CW-MMW" kind="unwind" unwindAction="unwindWithSegue:" id="nUM-2N-6rc"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="XRe-5t-Wsd" id="P82-1O-fO7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X4X-hA-gdv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="EkS-CW-MMW" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3440.8000000000002" y="794.75262368815595"/>
         </scene>

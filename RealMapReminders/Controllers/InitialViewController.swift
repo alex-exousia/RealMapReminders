@@ -1,16 +1,18 @@
 import UIKit
 import MapKit
+import CoreLocation
 protocol HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 class InitialViewController : UIViewController {
     let locationManager = CLLocationManager()
+
     var selectedPin:MKPlacemark? = nil
     var resultSearchController:UISearchController? = nil
     @IBOutlet weak var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestWhenInUseAuthorization()
@@ -40,6 +42,7 @@ extension InitialViewController : CLLocationManagerDelegate {
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
+            mapView.showsUserLocation = true
         }
     }
     

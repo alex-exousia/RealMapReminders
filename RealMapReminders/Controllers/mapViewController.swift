@@ -46,7 +46,7 @@ class mapViewController: UIViewController{
 }
 
 extension mapViewController: CLLocationManagerDelegate {
-    private func locationManager2(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+    private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
         }
