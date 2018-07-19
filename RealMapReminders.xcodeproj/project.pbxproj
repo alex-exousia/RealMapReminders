@@ -18,6 +18,7 @@
 		C931215920FFA35C00AA577C /* checklistTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215820FFA35B00AA577C /* checklistTableViewCell.swift */; };
 		C931215C20FFA37200AA577C /* RealMapReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C931215A20FFA37200AA577C /* RealMapReminders.xcdatamodeld */; };
 		C931215E20FFAC7B00AA577C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215D20FFAC7B00AA577C /* CoreDataHelper.swift */; };
+		C99A0DF421002B5100EA5A81 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A0DF321002B5100EA5A81 /* LaunchScreenViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C931215B20FFA37200AA577C /* RealMapReminders.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RealMapReminders.xcdatamodel; sourceTree = "<group>"; };
 		C931215D20FFAC7B00AA577C /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		C963E7DD20FFD6F1002A7AD3 /* RealMapReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealMapReminders.entitlements; sourceTree = "<group>"; };
+		C99A0DF321002B5100EA5A81 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				C931215220FFA20100AA577C /* checklistTableViewController.swift */,
 				C931215420FFA21C00AA577C /* createChecklistViewController.swift */,
 				C931215620FFA23A00AA577C /* LocationSearchTableViewController.swift */,
+				C99A0DF321002B5100EA5A81 /* LaunchScreenViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				C931214220FF9FB500AA577C /* InitialViewController.swift in Sources */,
 				C931214020FF9FB500AA577C /* AppDelegate.swift in Sources */,
 				C931215520FFA21C00AA577C /* createChecklistViewController.swift in Sources */,
+				C99A0DF421002B5100EA5A81 /* LaunchScreenViewController.swift in Sources */,
 				C931215C20FFA37200AA577C /* RealMapReminders.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

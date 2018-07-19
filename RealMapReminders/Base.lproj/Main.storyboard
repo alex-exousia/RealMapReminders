@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -127,13 +128,13 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4s9-GV-ECS" userLabel="1-3">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-rx-y89" userLabel="1">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Wallet" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Kdx-rx-y89" userLabel="1">
                                                 <rect key="frame" x="0.0" y="0.0" width="157.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="e8g-TV-lvX" userLabel="4">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Keys" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="e8g-TV-lvX" userLabel="4">
                                                 <rect key="frame" x="177.5" y="0.0" width="157.5" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -177,7 +178,7 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="locationTextField" borderStyle="roundedRect" placeholder="Location..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akl-zA-1Lb">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="locationTextField" borderStyle="roundedRect" placeholder="HOME " textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="akl-zA-1Lb">
                                 <rect key="frame" x="40" y="120" width="295" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -229,7 +230,7 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <items>
-                                <navigationItem title="Checklists" id="d3S-Ib-Rwx">
+                                <navigationItem title="LOCATIONS" id="d3S-Ib-Rwx">
                                     <barButtonItem key="rightBarButtonItem" systemItem="add" id="bd1-9r-dpb">
                                         <connections>
                                             <segue destination="5Mh-5D-WeJ" kind="show" id="dxK-cu-xht"/>
@@ -246,14 +247,37 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="119.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ahsvjbknsw" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsR-mF-nZT">
-                                            <rect key="frame" x="16" y="49" width="95" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="piF-TN-2LG">
+                                            <rect key="frame" x="36" y="31" width="303" height="57"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="dxrtcfgyvhubij" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsR-mF-nZT">
+                                                    <rect key="frame" x="0.0" y="4" width="117" height="49"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="749" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="k99-zR-ygH">
+                                                    <rect key="frame" x="222" y="14.5" width="81" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="81" id="bLV-7u-eFS"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Enter"/>
+                                                        <segment title="Leave"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vsR-mF-nZT" firstAttribute="top" secondItem="piF-TN-2LG" secondAttribute="top" constant="4" id="J76-wd-ICc"/>
+                                            </constraints>
+                                        </stackView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="piF-TN-2LG" firstAttribute="leading" secondItem="1tx-yd-0tr" secondAttribute="leadingMargin" constant="20" id="M6h-IB-dEq"/>
+                                        <constraint firstItem="piF-TN-2LG" firstAttribute="top" secondItem="1tx-yd-0tr" secondAttribute="topMargin" constant="20" id="Xud-ns-Ozv"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="piF-TN-2LG" secondAttribute="trailing" constant="20" id="qEg-Q3-iN3"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="piF-TN-2LG" secondAttribute="bottom" constant="21" id="vH0-fK-9G2"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="locationTitleLabel" destination="vsR-mF-nZT" id="ioN-Ut-ewq"/>
@@ -269,7 +293,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44r-z7-cOv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1806" y="133"/>
+            <point key="canvasLocation" x="1805.5999999999999" y="132.68365817091455"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Lmt-xB-1n6">
@@ -291,6 +315,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dxK-cu-xht"/>
+        <segue reference="zS7-on-8M5"/>
     </inferredMetricsTieBreakers>
 </document>
