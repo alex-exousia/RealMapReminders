@@ -39,7 +39,6 @@ class mapViewController: UIViewController{
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
         
-        
         //    let geofenceRegionCenter = CLLocationCoordinate2DMake(37.773485, -122.417719)
         //   let geofenceRegion = CLCircularRegion(center: geofenceRegionCenter,radius: 100,identifier: "UniqueIdentifier")
     }

@@ -102,7 +102,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YHL-Rv-t74">
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="YHL-Rv-t74">
                                 <rect key="frame" x="0.0" y="354" width="375" height="313"/>
                             </mapView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="v24-n7-UZu">
@@ -168,14 +168,19 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sb5-QF-OJU">
-                                <rect key="frame" x="102" y="418" width="171" height="185"/>
+                                <rect key="frame" x="102" y="480.5" width="171" height="60"/>
                                 <color key="backgroundColor" red="0.23137254901960785" green="0.34901960784313724" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="185" id="7gD-0O-YEv"/>
+                                    <constraint firstAttribute="height" constant="60" id="YpW-ox-eYX"/>
                                 </constraints>
                                 <state key="normal" title="Set New Location">
                                     <color key="titleColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <real key="value" value="0.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <segue destination="eig-87-i8x" kind="show" identifier="setNewLocation" id="fBf-zE-war"/>
                                 </connections>
@@ -211,6 +216,7 @@
                         <outlet property="fourTextField" destination="e8g-TV-lvX" id="RSR-XI-cxq"/>
                         <outlet property="locationTextField" destination="akl-zA-1Lb" id="FUI-Zf-QR9"/>
                         <outlet property="oneTextField" destination="Kdx-rx-y89" id="z94-Fw-1Sj"/>
+                        <outlet property="setNewLocationButton" destination="Sb5-QF-OJU" id="qyq-8S-BIP"/>
                         <outlet property="sixTextField" destination="OlL-eP-6ga" id="05T-dX-ea2"/>
                         <outlet property="threeTextField" destination="HqM-GV-Kcr" id="YwT-sc-bQg"/>
                         <outlet property="twoTextField" destination="SST-nw-Tok" id="Nl5-tF-30J"/>
