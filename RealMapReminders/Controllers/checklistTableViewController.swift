@@ -26,6 +26,8 @@ class checklistTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         reminders = CoreDataHelper.retrieveReminders()
+        self.navigationController?.isNavigationBarHidden = false
+       
 
     }
     
@@ -62,6 +64,7 @@ class checklistTableViewController: UITableViewController {
             
         case "addReminder":
             print("create new reminder bar button item tapped")
+            
             
         default:
             print("unexpected segue identifier")

@@ -14,6 +14,7 @@ class createChecklistViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.isNavigationBarHidden = false
     }
     
     @IBOutlet weak var locationTextField: UITextField!
@@ -30,6 +31,7 @@ class createChecklistViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
+        
         if let reminder = reminder {
             oneTextField.text = reminder.textField_1
             twoTextField.text = reminder.textField_2
@@ -38,6 +40,7 @@ class createChecklistViewController: UIViewController {
             fiveTextField.text = reminder.textField_5
             sixTextField.text = reminder.textField_6
             locationTextField.text = reminder.locationTitle
+            
             
         } else {
             oneTextField.text = ""
@@ -67,7 +70,7 @@ class createChecklistViewController: UIViewController {
             reminder?.textField_5 = fiveTextField.text ?? ""
             reminder?.textField_6 = sixTextField.text ?? ""
             reminder?.locationTitle = locationTextField.text ?? ""
-            
+
             destination.tableView.reloadData()
             
         // 3
@@ -81,9 +84,8 @@ class createChecklistViewController: UIViewController {
             reminder.textField_6 = sixTextField.text ?? ""
             reminder.locationTitle = locationTextField.text ?? ""
             
-            
-        case "cancel":
-            print("cancel bar button item tapped")
+        case "setNewLocation":
+            print("")
             
         default:
             print("unexpected segue identifier")
