@@ -13,12 +13,29 @@ protocol HandleMapSearch2 {
     func dropPinZoomIn(placemark:MKPlacemark)
 }
 
-class mapViewController: UIViewController{
+protocol MapViewControllerDelegate {
+    func updateLocationPin()
+}
+
+class MapViewController: UIViewController{
     @IBOutlet weak var mapView: MKMapView!
     let locationManager = CLLocationManager()
     var selectedPin:MKPlacemark? = nil
     var resultSearchController:UISearchController? = nil
     
+
+    
+    var delegate: MapViewControllerDelegate?
+    
+    @IBAction func buttonPressedUnwindSegue(_ sender: Any) {
+        // toss in code that will update the settings screen
+        if let delegate = self.delegate {
+            delegate.updateLocationPin()
+            
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround() 
@@ -44,7 +61,7 @@ class mapViewController: UIViewController{
     }
 }
 
-extension mapViewController: CLLocationManagerDelegate {
+extension MapViewController: CLLocationManagerDelegate {
     private func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
         if status == .authorizedWhenInUse {
             locationManager.requestLocation()
@@ -66,7 +83,7 @@ extension mapViewController: CLLocationManagerDelegate {
     }
 }
 
-extension mapViewController: HandleMapSearch {
+extension MapViewController: HandleMapSearch {
     func dropPinZoomIn(placemark:MKPlacemark){
         selectedPin = placemark
         mapView.removeAnnotations(mapView.annotations)

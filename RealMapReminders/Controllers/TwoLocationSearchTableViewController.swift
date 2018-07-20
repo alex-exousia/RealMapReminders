@@ -16,6 +16,7 @@ class TwoLocationSearchTable: UITableViewController {
         super.viewDidLoad()
         self.navigationItem.leftItemsSupplementBackButton = true
         self.navigationController?.isNavigationBarHidden = false
+
     }
     
     var handleMapSearchDelegate:HandleMapSearch? = nil

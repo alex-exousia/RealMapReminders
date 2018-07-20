@@ -21,7 +21,6 @@ class checklistTableViewController: UITableViewController {
     @IBAction func unwindWithSegue(_ segue: UIStoryboardSegue) {
         reminders = CoreDataHelper.retrieveReminders()
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

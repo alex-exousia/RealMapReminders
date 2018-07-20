@@ -6,7 +6,6 @@ protocol HandleMapSearch {
 }
 class InitialViewController : UIViewController {
     let locationManager = CLLocationManager()
-
     var selectedPin:MKPlacemark? = nil
     var resultSearchController:UISearchController? = nil
     @IBOutlet weak var mapView: MKMapView!

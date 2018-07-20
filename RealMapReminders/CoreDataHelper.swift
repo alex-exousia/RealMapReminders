@@ -70,8 +70,13 @@ struct CoreDataHelper {
             let results = try context.fetch(fetchRequest)
             //let sorted = results.sorted { (first, second) -> Bool in
             //  return first.modificationTime! > second.modificationTime!
-            print ("\(fetchRequest)")
-            print ("\(results)")
+            print("\n\n\nfetching request\n")
+//            print ("\(fetchRequest)")
+//            print ("\(results)")
+            print(results.count)
+            print(results[0].longToSave)
+            print(results[0].latToSave)
+            
         }
             //return sorted
         catch let error {

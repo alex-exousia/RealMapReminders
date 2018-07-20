@@ -19,7 +19,7 @@
 		C931215C20FFA37200AA577C /* RealMapReminders.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C931215A20FFA37200AA577C /* RealMapReminders.xcdatamodeld */; };
 		C931215E20FFAC7B00AA577C /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C931215D20FFAC7B00AA577C /* CoreDataHelper.swift */; };
 		C99A0DF421002B5100EA5A81 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C99A0DF321002B5100EA5A81 /* LaunchScreenViewController.swift */; };
-		C9B0F8952101025C00121389 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0F8942101025C00121389 /* mapViewController.swift */; };
+		C9B0F8952101025C00121389 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0F8942101025C00121389 /* MapViewController.swift */; };
 		C9B0F8972101027300121389 /* TwoLocationSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0F8962101027300121389 /* TwoLocationSearchTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -39,7 +39,7 @@
 		C931215D20FFAC7B00AA577C /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		C963E7DD20FFD6F1002A7AD3 /* RealMapReminders.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = RealMapReminders.entitlements; sourceTree = "<group>"; };
 		C99A0DF321002B5100EA5A81 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
-		C9B0F8942101025C00121389 /* mapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
+		C9B0F8942101025C00121389 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		C9B0F8962101027300121389 /* TwoLocationSearchTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoLocationSearchTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,7 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				C931214120FF9FB500AA577C /* InitialViewController.swift */,
-				C9B0F8942101025C00121389 /* mapViewController.swift */,
+				C9B0F8942101025C00121389 /* MapViewController.swift */,
 				C931215220FFA20100AA577C /* checklistTableViewController.swift */,
 				C931215420FFA21C00AA577C /* createChecklistViewController.swift */,
 				C931215620FFA23A00AA577C /* LocationSearchTableViewController.swift */,
@@ -181,7 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C931215720FFA23A00AA577C /* LocationSearchTableViewController.swift in Sources */,
-				C9B0F8952101025C00121389 /* mapViewController.swift in Sources */,
+				C9B0F8952101025C00121389 /* MapViewController.swift in Sources */,
 				C931215320FFA20100AA577C /* checklistTableViewController.swift in Sources */,
 				C931215E20FFAC7B00AA577C /* CoreDataHelper.swift in Sources */,
 				C9B0F8972101027300121389 /* TwoLocationSearchTableViewController.swift in Sources */,

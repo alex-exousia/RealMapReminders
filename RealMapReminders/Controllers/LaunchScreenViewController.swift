@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-class LaunshViewController: UIViewController {
+class LaunchViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
